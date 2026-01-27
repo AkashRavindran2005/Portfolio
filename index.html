@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Akash Ravindran - Software Engineer specializing in full-stack development, cybersecurity, and scalable backend systems">
+    <title>Akash Ravindran | Software Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- SSH Login Screen -->
+    <div id="ssh-screen">
+        <div class="ssh-terminal" id="ssh-terminal"></div>
+    </div>
+
+    <!-- Main Site (hidden initially) -->
+    <div id="main-site" class="hidden">
+        <!-- Navigation -->
+        <nav class="nav" id="nav">
+            <div class="nav-container">
+                <a href="#home" class="nav-logo">&lt;AR /&gt;</a>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="hero-greeting">Hi, I'm</p>
+                    <h1 class="hero-name">Akash Ravindran</h1>
+                    <div class="hero-title-wrapper">
+                        <span class="hero-title-prefix">A&nbsp;</span>
+                        <span class="hero-title" id="typed-text"></span>
+                        <span class="cursor">|</span>
+                    </div>
+                    <p class="hero-description">
+                        Building scalable systems & breaking security barriers.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                        <a href="/resume.pdf" download class="btn btn-resume" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18"
+                                height="18">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+                            </svg>
+                            Resume
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-terminal">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">akash@portfolio:~</span>
+                    </div>
+                    <div class="terminal-body">
+                        <p><span class="terminal-prompt">$</span> cat about.txt</p>
+                        <p class="terminal-output">I build things until they work.</p>
+                        <p class="terminal-output">Then I break them to see why they did.</p>
+                        <br>
+                        <p class="terminal-output">Mostly code. Occasionally chaos.</p>
+                        <p class="terminal-output">Curiosity is the constant.</p>
+                        <p><span class="terminal-prompt">$</span> whoami</p>
+                        <p class="terminal-output">CS Student @ SRM</p>
+
+                        <p><span class="terminal-prompt">$</span> <span class="terminal-cursor">_</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <div class="scroll-arrow"></div>
+            </div>
+        </section>
+
+        <!-- About Section - CTF Style -->
+        <section class="section about" id="about">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-number">01.</span> <span class="glitch" data-text="whoami">whoami</span>
+                </h2>
+                <div class="about-ctf">
+                    <div class="ctf-terminal">
+                        <div class="terminal-header">
+                            <span class="terminal-dot red"></span>
+                            <span class="terminal-dot yellow"></span>
+                            <span class="terminal-dot green"></span>
+                            <span class="terminal-title">root@akash:~# cat /etc/profile</span>
+                        </div>
+                        <div class="terminal-body ctf-body">
+                            <div class="ctf-line">
+                                <span class="ctf-prompt">$</span>
+                                <span class="ctf-command">cat ./about.txt</span>
+                            </div>
+                            <div class="ctf-output">
+                                <p>> Computer Science student passionate about <span class="highlight">breaking</span>
+                                    and
+                                    <span class="highlight">building</span> systems.
+                                </p>
+                                <p>> Started with curiosity about how things work — evolved into reverse
+                                    engineering
+                                    them.
+                                </p>
+                            </div>
+                            <div class="ctf-line">
+                                <span class="ctf-prompt">$</span>
+                                <span class="ctf-command">grep -i "education" ./resume.txt</span>
+                            </div>
+                            <div class="ctf-output">
+                                <p>> B.Tech CSE - Cybersecurity @ SRM Institute</p>
+                                <p>> Expected Graduation: 2027</p>
+                            </div>
+                            <div class="ctf-line">
+                                <span class="ctf-prompt">$</span>
+                                <span class="ctf-command">./skillcheck --verbose</span>
+                            </div>
+                            <div class="ctf-output">
+                                <p>> Full-stack applications ✓</p>
+                                <p>> Backend systems (500+ concurrent ops) ✓</p>
+                                <p>> Security automation ✓</p>
+                                <p>> Vulnerability assessment ✓</p>
+                            </div>
+                            <div class="ctf-line">
+                                <span class="ctf-prompt">$</span>
+                                <span class="ctf-cursor">_</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-preview">
+                        <div class="blog-card">
+                            <div class="blog-icon">📝</div>
+                            <h3 class="blog-title">Blog</h3>
+                            <p class="blog-desc">Thoughts on security, code, and the web — coming soon.</p>
+                            <a href="#" class="btn btn-blog">
+                                <span>Read Blog</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18"
+                                    height="18">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                            <div class="blog-coming-soon">Coming Soon</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="section experience" id="experience">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-number">02.</span> <span class="glitch"
+                        data-text="Experience">Experience</span>
+                </h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Software Engineering Intern</h3>
+                                <span class="timeline-company">@ Bahwan Cybertek</span>
+                            </div>
+                            <p class="timeline-date">May 2025 - July 2025 • Chennai</p>
+                            <ul class="timeline-details">
+                                <li>Developed Python-based automation pipelines to integrate multiple tools into
+                                    unified
+                                    backend workflows</li>
+                                <li>Built internal dashboards using FastAPI and React to visualize system data
+                                    and
+                                    operational metrics</li>
+                                <li>Improved backend performance and reliability by optimizing API flows and
+                                    background
+                                    tasks</li>
+                                <li>Authored technical documentation and participated in code reviews using
+                                    Git-based
+                                    workflows</li>
+                            </ul>
+                            <div class="timeline-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">FastAPI</span>
+                                <span class="tag">React</span>
+                                <span class="tag">Security Automation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section projects" id="projects">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-number">03.</span> <span class="glitch" data-text="Latest Projects">Latest
+                        Projects</span>
+                </h2>
+                <div class="projects-grid-new">
+                    <article class="project-card-new">
+                        <div class="project-image-wrapper">
+                            <!-- Add your project screenshot: src="images/vapt-dashboard.png" -->
+                            <div class="project-image-placeholder">
+                                <span>🛡️</span>
+                            </div>
+                            <div class="project-overlay-new">
+                                <a href="https://github.com/AkashRavindran2005/Vapt-dashboard" target="_blank"
+                                    rel="noopener" class="project-link-new">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        width="24" height="24">
+                                        <path
+                                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Featured • Security</span>
+                            <h3>Enterprise VAPT Dashboard</h3>
+                            <p>Full-stack vulnerability assessment platform with async task processing handling
+                                500+
+                                concurrent jobs.</p>
+                            <div class="project-stack">
+                                <span>Python</span>
+                                <span>FastAPI</span>
+                                <span>React</span>
+                                <span>Nmap</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card-new">
+                        <div class="project-image-wrapper">
+                            <!-- Add your project screenshot: src="images/veritas.png" -->
+                            <div class="project-image-placeholder">
+                                <span>🔍</span>
+                            </div>
+                            <div class="project-overlay-new">
+                                <a href="https://github.com/AkashRavindran2005/Veritas" target="_blank" rel="noopener"
+                                    class="project-link-new">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        width="24" height="24">
+                                        <path
+                                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">OSINT • ML</span>
+                            <h3>Veritas</h3>
+                            <p>Misinformation investigation platform analyzing 100+ news sources with BERT-based
+                                classification.</p>
+                            <div class="project-stack">
+                                <span>Python</span>
+                                <span>Streamlit</span>
+                                <span>BERT</span>
+                                <span>Plotly</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card-new coming-soon-card">
+                        <div class="project-image-wrapper">
+                            <div class="project-image-placeholder">
+                                <span>🚀</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">More Coming</span>
+                            <h3>Stay Tuned</h3>
+                            <p>More projects are in the works. Check back soon!</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section skills" id="skills">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-number">04.</span> <span class="glitch"
+                        data-text="skills.json">skills.json</span>
+                </h2>
+                <div class="skills-showcase">
+                    <!-- Languages -->
+                    <div class="skill-group" data-aos="fade-up">
+                        <h3 class="skill-group-title">// Languages</h3>
+                        <div class="skill-cards">
+                            <div class="skill-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                    alt="Python" class="skill-logo">
+                                <span class="skill-name">Python</span>
+                            </div>
+                            <div class="skill-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                                    alt="JavaScript" class="skill-logo">
+                                <span class="skill-name">JavaScript</span>
+                            </div>
+                            <div class="skill-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                                    alt="HTML5" class="skill-logo">
+                                <span class="skill-name">HTML5</span>
+                            </div>
+                            <div class="skill-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                                    alt="CSS3" class="skill-logo">
+                                <span class="skill-name">CSS3</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Frameworks -->
+                    <div class="skill-group" data-aos="fade-up">
+                        <h3 class="skill-group-title">// Frameworks</h3>
+                        <div class="skill-cards">
+                            <div class="skill-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"
+                                    alt="FastAPI" class="skill-logo">
+                                <span class="skill-name">FastAPI</span>
+                            </div>
+                            <div class="skill-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                                    alt="React" class="skill-logo">
+                                <span class="skill-name">React</span>
+                            </div>
+                            <div class="skill-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                                    alt="Node.js" class="skill-logo">
+                                <span class="skill-name">Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Databases -->
+                    <div class="skill-group" data-aos="fade-up">
+                        <h3 class="skill-group-title">// Databases</h3>
+                        <div class="skill-cards">
+                            <div class="skill-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                                    alt="MySQL" class="skill-logo">
+                                <span class="skill-name">MySQL</span>
+                            </div>
+                            <div class="skill-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                                    alt="PostgreSQL" class="skill-logo">
+                                <span class="skill-name">PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Infrastructure -->
+                    <div class="skill-group" data-aos="fade-up">
+                        <h3 class="skill-group-title">// Infrastructure</h3>
+                        <div class="skill-cards">
+                            <div class="skill-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                                    alt="Docker" class="skill-logo">
+                                <span class="skill-name">Docker</span>
+                            </div>
+                            <div class="skill-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                                    alt="Git" class="skill-logo">
+                                <span class="skill-name">Git</span>
+                            </div>
+                            <div class="skill-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                                    alt="GitHub" class="skill-logo github-invert">
+                                <span class="skill-name">GitHub</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Security -->
+                    <div class="skill-group security-group" data-aos="fade-up">
+                        <h3 class="skill-group-title">// Security</h3>
+                        <div class="security-skills">
+                            <div class="security-item">
+                                <span class="security-icon">�</span>
+                                <div class="security-info">
+                                    <span class="security-name">Vulnerability Assessment</span>
+                                    <span class="security-desc">Network & Web Application Testing</span>
+                                </div>
+                            </div>
+                            <div class="security-item">
+                                <span class="security-icon">⚙️</span>
+                                <div class="security-info">
+                                    <span class="security-name">Security Automation</span>
+                                    <span class="security-desc">Python-based Security Pipelines</span>
+                                </div>
+                            </div>
+                            <div class="security-item">
+                                <span class="security-icon">🌐</span>
+                                <div class="security-info">
+                                    <span class="security-name">Web Security</span>
+                                    <span class="security-desc">OWASP, XSS, SQL Injection</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications & Leadership -->
+        <section class="section extras" id="extras">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-number">05.</span> <span class="glitch"
+                        data-text="./achievements">./achievements</span>
+                </h2>
+                <div class="extras-terminals">
+                    <!-- Certifications Terminal -->
+                    <div class="extras-terminal">
+                        <div class="terminal-header">
+                            <span class="terminal-dot red"></span>
+                            <span class="terminal-dot yellow"></span>
+                            <span class="terminal-dot green"></span>
+                            <span class="terminal-title">certifications.sh</span>
+                        </div>
+                        <div class="terminal-body">
+                            <p><span class="terminal-prompt">$</span> cat ./certs.txt</p>
+                            <div class="terminal-output">
+                                <p>> <span class="cert-highlight">IBM Full Stack Developer</span> <span
+                                        class="cert-status-term ongoing">[ IN PROGRESS ]</span></p>
+                                <p> Professional Certificate • Coursera</p>
+                            </div>
+                            <div class="terminal-output">
+                                <p>> <span class="cert-highlight">Google Cybersecurity</span> <span
+                                        class="cert-status-term completed">[ 2024 ]</span></p>
+                                <p> Professional Certificate • Google</p>
+                            </div>
+                            <p><span class="terminal-prompt">$</span> <span class="terminal-cursor">_</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Leadership Terminal -->
+                    <div class="extras-terminal">
+                        <div class="terminal-header">
+                            <span class="terminal-dot red"></span>
+                            <span class="terminal-dot yellow"></span>
+                            <span class="terminal-dot green"></span>
+                            <span class="terminal-title">leadership.sh</span>
+                        </div>
+                        <div class="terminal-body">
+                            <p><span class="terminal-prompt">$</span> ./list-roles --active</p>
+                            <div class="terminal-output">
+                                <p>> <span class="role-highlight">Creatives Head</span></p>
+                                <p> Codekrafters (College Club)</p>
+                                <p> <span class="role-date">Jul 2024 - Present</span></p>
+                            </div>
+                            <div class="terminal-output">
+                                <p>> <span class="role-highlight">Core Member</span></p>
+                                <p> Centre for Cybersecurity Empowerment</p>
+                                <p> <span class="role-date">Jul 2025 - Present</span></p>
+                            </div>
+                            <p><span class="terminal-prompt">$</span> <span class="terminal-cursor">_</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact" id="contact">
+            <div class="container">
+                <h2 class="section-title center">
+                    <span class="section-number">07.</span> <span class="glitch" data-text="Get In Touch">Get In
+                        Touch</span>
+                </h2>
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <p class="contact-text">
+                            I'm currently looking for <strong>Software Engineering Internship</strong>
+                            opportunities.
+                            Whether you have a question, a project idea, or just want to say hi — my inbox is
+                            always
+                            open!
+                        </p>
+                        <div class="contact-details">
+                            <a href="mailto:akashravindran2005@gmail.com" class="contact-detail">
+                                <span class="detail-icon">📧</span>
+                                <span>akashravindran2005@gmail.com</span>
+                            </a>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://github.com/AkashRavindran2005" target="_blank" rel="noopener"
+                                class="social-link" aria-label="GitHub">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                            </a>
+                            <a href="https://linkedin.com/in/akashravindran" target="_blank" rel="noopener"
+                                class="social-link" aria-label="LinkedIn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="What's on your mind?"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Send Message</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18"
+                                height="18">
+                                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Designed & Built by <strong>Akash Ravindran</strong></p>
+            <p class="footer-note">Built with vanilla HTML, CSS & JavaScript</p>
+        </footer>
+    </div><!-- end main-site -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>
