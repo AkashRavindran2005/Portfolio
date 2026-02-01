@@ -40,14 +40,10 @@ function typeRole() {
     setTimeout(typeRole, typingSpeed);
 }
 
-// Start typing animation
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(typeRole, 1000);
 });
 
-// ============================================
-// Mobile Navigation Toggle
-// ============================================
 const navToggle = document.getElementById('nav-toggle');
 const navMenu = document.getElementById('nav-menu');
 const navLinks = document.querySelectorAll('.nav-link');
@@ -57,22 +53,16 @@ navToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 });
 
-// Close menu when clicking a link
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         navToggle.classList.remove('active');
         navMenu.classList.remove('active');
     });
 });
-
-// ============================================
-// Scroll Reveal Animation
-// ============================================
 const revealElements = document.querySelectorAll(
     '.section-title, .about-ctf, .ctf-terminal, .blog-preview, .timeline-item, .extras-column, .contact-content'
 );
 
-// Project cards with staggered animation
 const projectCards = document.querySelectorAll('.project-card-scroll');
 const skillGroups = document.querySelectorAll('.skill-group');
 
@@ -87,7 +77,6 @@ const revealOnScroll = () => {
         }
     });
 
-    // Staggered reveal for project cards
     projectCards.forEach((card, index) => {
         const cardTop = card.getBoundingClientRect().top;
 
@@ -98,7 +87,6 @@ const revealOnScroll = () => {
         }
     });
 
-    // Staggered reveal for skill groups
     skillGroups.forEach((group, index) => {
         const groupTop = group.getBoundingClientRect().top;
 
@@ -110,15 +98,11 @@ const revealOnScroll = () => {
     });
 };
 
-// Add reveal class to elements
 revealElements.forEach(el => el.classList.add('reveal'));
 
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
 
-// ============================================
-// Active Navigation Highlight
-// ============================================
 const sections = document.querySelectorAll('section[id]');
 
 const highlightNav = () => {
@@ -139,9 +123,6 @@ const highlightNav = () => {
 
 window.addEventListener('scroll', highlightNav);
 
-// ============================================
-// Navbar Background on Scroll
-// ============================================
 const nav = document.getElementById('nav');
 
 const handleNavScroll = () => {
@@ -154,9 +135,6 @@ const handleNavScroll = () => {
 
 window.addEventListener('scroll', handleNavScroll);
 
-// ============================================
-// Smooth Scroll for Safari
-// ============================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -170,15 +148,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ============================================
-// SSH Login Animation (Extended)
-// ============================================
 (function () {
     const sshScreen = document.getElementById('ssh-screen');
     const sshTerminal = document.getElementById('ssh-terminal');
     const mainSite = document.getElementById('main-site');
 
-    // Check if already logged in this session
     if (sessionStorage.getItem('sshComplete')) {
         if (sshScreen) sshScreen.classList.add('hidden');
         if (mainSite) mainSite.classList.remove('hidden');
@@ -187,7 +161,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
     if (!sshScreen || !sshTerminal || !mainSite) return;
 
-    // SSH sequence steps
     const sequence = [
         { type: 'typing', prompt: 'guest@localhost:~$ ', text: 'ssh akash@portfolio', delay: 800 },
         { type: 'output', text: 'The authenticity of host \'portfolio (192.168.1.42)\' can\'t be established.', delay: 400 },
@@ -297,6 +270,5 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }, step.delay);
     }
 
-    // Start the sequence
     setTimeout(() => processStep(0), 500);
 })();
