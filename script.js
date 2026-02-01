@@ -178,7 +178,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 <span class="ssh-welcome">Welcome to Portfolio OS v2.0 (GNU/Linux 5.15.0-generic x86_64)</span>
 
  * Documentation:  <span class="ssh-info">https://akashravindran.dev/docs</span>
- * Support:        <span class="ssh-info">akashravindran2005@gmail.com</span>
+ * Support:        <span class="ssh-info">akashravindran2500@gmail.com</span>
 
 <span class="ssh-output">System information as of ${new Date().toLocaleString()}</span>
 
