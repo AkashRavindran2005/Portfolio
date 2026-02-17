@@ -2697,3 +2697,221 @@ img {
         gap: 40px;
     }
 }
+
+/* ===== COMPREHENSIVE MOBILE FIXES ===== */
+@media (max-width: 480px) {
+
+    /* Prevent horizontal overflow */
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    /* SSH Terminal Mobile */
+    .ssh-terminal {
+        font-size: 11px;
+        line-height: 1.4;
+        padding: 16px;
+        max-width: 100%;
+        word-break: break-word;
+    }
+
+    .ssh-line {
+        min-height: 18px;
+    }
+
+    /* Hero Section Mobile */
+    .hero-name {
+        font-size: 2rem;
+    }
+
+    .hero-title {
+        font-size: 1.1rem;
+    }
+
+    .hero-description {
+        font-size: 0.9rem;
+    }
+
+    .hero-terminal {
+        display: none;
+    }
+
+    .hero-content {
+        padding: 0 16px;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-cta .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Section Titles Mobile */
+    .section-title {
+        font-size: 1.3rem;
+        flex-wrap: wrap;
+    }
+
+    .section-number {
+        font-size: 0.9rem;
+    }
+
+    /* About CTF Terminal Mobile */
+    .ctf-terminal {
+        font-size: 0.8rem;
+    }
+
+    .about-ctf {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .blog-preview {
+        display: none;
+    }
+
+    /* Experience Timeline Mobile */
+    .timeline-content {
+        padding: 16px;
+    }
+
+    .timeline-header h3 {
+        font-size: 1rem;
+    }
+
+    .timeline-details li {
+        font-size: 0.85rem;
+        padding-left: 16px;
+    }
+
+    .timeline-tags {
+        gap: 6px;
+    }
+
+    .timeline-tags .tag {
+        font-size: 0.7rem;
+        padding: 4px 8px;
+    }
+
+    /* Projects Grid Mobile */
+    .projects-grid-new {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project-card-new {
+        max-width: 100%;
+    }
+
+    .project-info {
+        padding: 16px;
+    }
+
+    .project-info h3 {
+        font-size: 1.1rem;
+    }
+
+    .project-info p {
+        font-size: 0.85rem;
+    }
+
+    .project-stack {
+        gap: 6px;
+    }
+
+    .project-stack span {
+        font-size: 0.7rem;
+        padding: 4px 8px;
+    }
+
+    /* Skills Section Mobile */
+    .skills-showcase {
+        padding: 16px;
+    }
+
+    .skill-group {
+        padding: 16px;
+    }
+
+    .skill-group-title {
+        font-size: 0.8rem;
+    }
+
+    .skill-cards {
+        gap: 8px;
+    }
+
+    .skill-card {
+        padding: 10px 12px;
+        min-width: auto;
+    }
+
+    .skill-logo {
+        width: 20px;
+        height: 20px;
+    }
+
+    .skill-name {
+        font-size: 0.75rem;
+    }
+
+    /* Extras/Achievements Section Mobile */
+    .extras-terminals {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .extras-terminal {
+        max-width: 100%;
+    }
+
+    .extras-terminal .terminal-body {
+        padding: 12px;
+        font-size: 0.8rem;
+    }
+
+    .cert-highlight {
+        font-size: 0.85rem;
+    }
+
+    .cert-status-term {
+        font-size: 0.7rem;
+    }
+
+    .role-highlight {
+        font-size: 0.85rem;
+    }
+
+    /* Contact Section Mobile */
+    .contact-text {
+        font-size: 0.9rem;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.9rem;
+    }
+
+    /* Footer Mobile */
+    .footer {
+        padding: 20px 16px;
+        font-size: 0.8rem;
+    }
+}
