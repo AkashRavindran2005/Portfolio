@@ -1,6 +1,3 @@
-// ============================================
-// Typing Animation
-// ============================================
 const typedTextElement = document.getElementById('typed-text');
 const roles = [
     'Full-Stack Developer',
@@ -28,7 +25,6 @@ function typeRole() {
     }
 
     if (!isDeleting && charIndex === currentRole.length) {
-        // Pause at end of word
         isDeleting = true;
         typingSpeed = 2000;
     } else if (isDeleting && charIndex === 0) {
